@@ -5,12 +5,6 @@ Features include dragging, pinch-to-zoom, mouse wheel zooming, decelerated dragg
 
 All features are configurable and removable, so set up the viewport to be exactly what you need.
 
-## Support pixi-viewport!
-With your support, I can make pixi-viewport even better! Please consider making a donation:
-<a href="https://opencollective.com/pixi-viewport/donate" target="_blank">
-  <img src="https://opencollective.com/pixi-viewport/donate/button@2x.png?color=blue" width=300 style="margin-top: 0.5rem; display: block"/>
-</a>
-
 ## v5.2+
 Moves pixi-viewport to pixi.js v7.2+
 
@@ -32,11 +26,11 @@ const viewport = new Viewport({ events: renderer.events });
 This project was migrated to Typescript (thanks [@ShukantPal](https://github.com/ShukantPal)!). All functionality should be the same. The live Example has been updated.
 
 ## Live Examples
-* New: [https://davidfig.github.io/pixi-viewport/](https://davidfig.github.io/pixi-viewport/) (using [flems.io](https://flems.io))
-* Original:  [https://davidfig.github.io/pixi-viewport/original/](https://davidfig.github.io/pixi-viewport/original)
+* New: [https://pixi-viewport.github.io/pixi-viewport/](https://pixi-viewport.github.io/pixi-viewport/) (using [flems.io](https://flems.io))
+* Original:  [https://pixi-viewport.github.io/pixi-viewport/original/](https://pixi-viewport.github.io/pixi-viewport/original)
 
 ## API Documentation
-[https://davidfig.github.io/pixi-viewport/jsdoc/](https://davidfig.github.io/pixi-viewport/jsdoc/)
+[https://pixi-viewport.github.io/pixi-viewport/jsdoc/](https://pixi-viewport.github.io/pixi-viewport/jsdoc/)
 
 ## Simple Example
 ```js
@@ -143,4 +137,4 @@ If you liked pixi-viewport, please try my other open source libraries:
 
 ## license
 MIT License
-(c) 2023 [YOPEY YOPEY LLC](https://yopeyopey.com/) by David Figatner (david@yopeyopey.com)
+(c) 2024 [YOPEY YOPEY LLC](https://yopeyopey.com/) by David Figatner (david@yopeyopey.com)
