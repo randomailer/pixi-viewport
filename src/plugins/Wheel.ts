@@ -202,10 +202,12 @@ export class Wheel extends Plugin
             }
             else
             {
-                const newPoint = this.parent.toGlobal(oldPoint as PointData);
+                this.parent.parent.toLocal(oldPoint as IPointData, this.parent, oldPoint);
+                const comparePoint = this.parent.parent.toLocal(point as IPointData);
 
-                this.parent.x += (point as PointData).x - newPoint.x;
-                this.parent.y += (point as PointData).y - newPoint.y;
+                this.parent.x += comparePoint.x - (oldPoint as IPointData).x;
+                this.parent.y += comparePoint.y - (oldPoint as IPointData).y;
+
             }
 
             this.parent.emit('moved', { viewport: this.parent, type: 'wheel' });
@@ -256,14 +258,15 @@ export class Wheel extends Plugin
         }
         else
         {
-            const newPoint = this.parent.toGlobal(oldPoint as PointData);
+            this.parent.parent.toLocal(oldPoint as IPointData, this.parent, oldPoint);
+            const comparePoint = this.parent.parent.toLocal(point as IPointData);
 
-            this.parent.x += point.x - newPoint.x;
-            this.parent.y += point.y - newPoint.y;
+            this.parent.x += comparePoint.x - (oldPoint as IPointData).x;
+            this.parent.y += comparePoint.y - (oldPoint as IPointData).y;
         }
+
         this.parent.emit('moved', { viewport: this.parent, type: 'wheel' });
-        this.parent.emit('wheel-start',
-            { event: e, viewport: this.parent });
+        this.parent.emit('wheel-start', { event: e, viewport: this.parent });
     }
 
     public wheel(e: WheelEvent): boolean
@@ -332,10 +335,11 @@ export class Wheel extends Plugin
                 }
                 else
                 {
-                    const newPoint = this.parent.toGlobal(oldPoint as PointData);
+                    this.parent.parent.toLocal(oldPoint as IPointData, this.parent, oldPoint);
+                    const comparePoint = this.parent.parent.toLocal(point as IPointData);
 
-                    this.parent.x += point.x - newPoint.x;
-                    this.parent.y += point.y - newPoint.y;
+                    this.parent.x += comparePoint.x - (oldPoint as IPointData).x;
+                    this.parent.y += comparePoint.y - (oldPoint as IPointData).y;
                 }
             }
 
