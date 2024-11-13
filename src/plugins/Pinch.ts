@@ -1,8 +1,7 @@
-import { Plugin } from './Plugin';
 import { Point } from 'pixi.js';
+import { Plugin } from './Plugin';
 
-import type { PointData } from 'pixi.js';
-import type { FederatedPointerEvent } from 'pixi.js';
+import type { FederatedPointerEvent, PointData } from 'pixi.js';
 import type { IViewportTouch } from '../InputManager';
 import type { Viewport } from '../Viewport';
 
