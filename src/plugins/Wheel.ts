@@ -202,12 +202,10 @@ export class Wheel extends Plugin
             }
             else
             {
-                this.parent.parent.toLocal(
-                    oldPoint as PointData,
-                    this.parent,
-                    oldPoint
-                );
-                const comparePoint = this.parent.parent.toLocal(point as PointData);
+                const targetParent = this.parent.parent || this.parent;
+
+                targetParent.toLocal(oldPoint as PointData, this.parent, oldPoint);
+                const comparePoint = targetParent.toLocal(point as PointData);
 
                 this.parent.x += comparePoint.x - (oldPoint as PointData).x;
                 this.parent.y += comparePoint.y - (oldPoint as PointData).y;
@@ -265,8 +263,10 @@ export class Wheel extends Plugin
         }
         else
         {
-            this.parent.parent.toLocal(oldPoint as PointData, this.parent, oldPoint);
-            const comparePoint = this.parent.parent.toLocal(point as PointData);
+            const targetParent = this.parent.parent || this.parent;
+
+            targetParent.toLocal(oldPoint as PointData, this.parent, oldPoint);
+            const comparePoint = targetParent.toLocal(point as PointData);
 
             this.parent.x += comparePoint.x - (oldPoint as PointData).x;
             this.parent.y += comparePoint.y - (oldPoint as PointData).y;
@@ -355,12 +355,10 @@ export class Wheel extends Plugin
                 }
                 else
                 {
-                    this.parent.parent.toLocal(
-                        oldPoint as PointData,
-                        this.parent,
-                        oldPoint
-                    );
-                    const comparePoint = this.parent.parent.toLocal(point as PointData);
+                    const targetParent = this.parent.parent || this.parent;
+
+                    targetParent.toLocal(oldPoint as PointData, this.parent, oldPoint);
+                    const comparePoint = targetParent.toLocal(point as PointData);
 
                     this.parent.x += comparePoint.x - (oldPoint as PointData).x;
                     this.parent.y += comparePoint.y - (oldPoint as PointData).y;
