@@ -1,5 +1,3 @@
-// https://github.com/pixijs/pixijs/issues/8957
-
 declare namespace PixiMixins
 {
   type Viewport = import('./Viewport').Viewport;
