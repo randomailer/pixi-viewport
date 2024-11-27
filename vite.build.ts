@@ -19,14 +19,11 @@ export default defineConfig({
             fileName: 'pixi_viewport',
         },
         rollupOptions: {
-            external: [
-                'pixi.js',
-                ...Object.keys(globals),
-            ],
+            external: ['pixi.js', ...Object.keys(globals)],
             output: {
-                globals
+                globals,
             },
         },
     },
-    plugins: [dts()]
+    plugins: [dts({ copyDtsFiles: true })],
 });
