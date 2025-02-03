@@ -35,12 +35,12 @@ This project was migrated to Typescript (thanks [@ShukantPal](https://github.com
 
 ## Live Examples
 
-- New: [https://pixi-viewport.github.io/pixi-viewport/](https://pixi-viewport.github.io/pixi-viewport/) (using [flems.io](https://flems.io))
-- Original: [https://pixi-viewport.github.io/pixi-viewport/original/](https://pixi-viewport.github.io/pixi-viewport/original)
+- New: [https://viewport.pixijs.io/](https://viewport.pixijs.io/) (using [flems.io](https://flems.io))
+- Original: [https://viewport.pixijs.io/original/](https://viewport.pixijs.io/original)
 
 ## API Documentation
 
-[https://pixi-viewport.github.io/pixi-viewport/jsdoc/](https://pixi-viewport.github.io/pixi-viewport/jsdoc/)
+[https://viewport.pixijs.io/jsdoc/](https://viewport.pixijs.io/jsdoc/)
 
 ## Simple Example
 
