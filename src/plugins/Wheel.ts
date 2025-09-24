@@ -287,7 +287,7 @@ export class Wheel extends Plugin
         {
             this.pinch(e);
         }
-        else if ((!this.options.keyToPress || !this.checkKeyPress()) && this.options.wheelZoom)
+        else if ((!this.options.keyToPress || this.checkKeyPress()) && this.options.wheelZoom)
         {
             const point = this.parent.input.getPointerPosition(e);
             const sign = this.options.reverse ? -1 : 1;
