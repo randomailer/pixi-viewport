@@ -143,7 +143,7 @@ export class Wheel extends Plugin
         });
     }
 
-    protected checkKeyPress(): boolean
+    public checkKeyPress(): boolean
     {
         return !this.options.keyToPress || this.keyIsPressed;
     }
@@ -283,16 +283,11 @@ export class Wheel extends Plugin
             return false;
         }
 
-        if (!this.checkKeyPress())
-        {
-            return false;
-        }
-
         if (e.ctrlKey && this.options.trackpadPinch)
         {
             this.pinch(e);
         }
-        else if (this.options.wheelZoom)
+        else if ((!this.options.keyToPress || !this.checkKeyPress()) && this.options.wheelZoom)
         {
             const point = this.parent.input.getPointerPosition(e);
             const sign = this.options.reverse ? -1 : 1;
